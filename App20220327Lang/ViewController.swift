@@ -13,10 +13,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        myLabel.text = NSLocalizedString("Hello", comment: "")
+//        myLabel.text = NSLocalizedString("Hello", comment: "")
+        myLabel.text = "Hello".localize()
         print(Locale.current)
     }
+}
 
-
+extension String {
+    func localize() -> String {
+        return NSLocalizedString(self, comment: "")
+    }
 }
 
