@@ -10,12 +10,17 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var myLabel: UILabel!
+    @IBOutlet weak var myImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
 //        myLabel.text = NSLocalizedString("Hello", comment: "")
         myLabel.text = "Hello".localize()
         print(Locale.current)
+        
+//        myImage.image = UIImage(named: "Image".localize())
+        myImage.image = UIImage(named: "Hello")
     }
 }
 
